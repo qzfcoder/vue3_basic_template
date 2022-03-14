@@ -81,7 +81,7 @@ npm install commitizen -D
 npx commitizen init cz-conventional-changelog --save-dev --save-exact
 ```
 
-
+![cd536010a43ad1e7aa45c62639cc050.png](https://s2.loli.net/2022/03/14/NvOGUAu56J1LiIR.png)
 
 ## Project setup
 
