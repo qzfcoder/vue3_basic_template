@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import upImg from '@/components/upImg.vue'
-import { computed, defineComponent } from 'vue'
+import { defineComponent } from 'vue'
 // import { useStore } from 'vuex'
 export default defineComponent({
   components: {
