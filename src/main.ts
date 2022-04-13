@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import { globalRegister } from './global'
 import './service/axios_demo'
 import { createPinia } from 'pinia'
 const pinia = createPinia()

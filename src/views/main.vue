@@ -1,5 +1,7 @@
 <template>
   <div>main</div>
+  <el-button>按钮test</el-button>
+  <t-form v-bind="Config" v-model="formData"></t-form>
   <up-img></up-img>
   <!-- <div>{{ $store.state.name }}</div>
   <div>{{ asd }}</div> -->
@@ -7,16 +9,25 @@
 
 <script lang="ts">
 import upImg from '@/components/upImg.vue'
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 // import { useStore } from 'vuex'
+import tForm from '@/base-ui/form.vue'
+import { Config } from './config'
 export default defineComponent({
   components: {
-    upImg
+    upImg,
+    tForm
   },
-  setup() {
+  setup(props) {
+    const formItems = Config?.formItems ?? []
+    const formOringData: any = {}
+    for (const item of formItems) {
+      formOringData[item.field] = ''
+    }
+    const formData = ref(formOringData)
     // const store = useStore()
     // const asd = computed(() => store.state.name)
-    // return { asd }
+    return { Config, formData }
   }
 })
 </script>
